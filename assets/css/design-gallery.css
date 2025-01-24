@@ -1,0 +1,907 @@
+.whatsapp-main{
+    position: fixed;
+    bottom: 80px;
+    text-align: right;
+    right: 5px;
+    z-index: 10000;
+}
+/* Notification Bar */
+#noty-holder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.alert {
+    background-color: #D32F2F;
+    color: #ffffff;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.notify-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ffffff;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-bottom: 1px solid #f2f2f2;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.navbar-brand img {
+    max-height: 80px;
+    width: 250px;
+}
+
+/* Navigation Links */
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+/* Dropdown Container */
+.nav-item.dropdown {
+    position: relative;
+}
+
+/* Dropdown Menu *//* Dropdown Menu */
+.nav-item .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff; /* White background */
+    border: 1px solid #e0e0e0; /* Light border */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a nice effect */
+    z-index: 1000;
+    list-style: none;
+    padding: 20px 0 !important;
+    margin: 0 !important;
+    min-width: 250px; /* Slightly wider for a cleaner look */
+    font-family: 'Roboto', Arial, sans-serif; /* Consistent font */
+}
+
+/* Dropdown Item */
+.nav-item .dropdown-menu .dropdown-item {
+    padding: 8px 20px; /* Increased padding for better clickability */
+    font-size: 17px; /* Slightly larger font */
+    color: #444; /* Neutral dark color */
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Roboto', Arial, sans-serif; /* Same font as nav links */
+    margin: 15px 0px !important;
+    display: block; /* Ensure it's a block-level item */
+}
+
+/* Dropdown Item Hover */
+.nav-item .dropdown-menu .dropdown-item:hover {
+    background-color: #D32F2F; /* Highlight background */
+    color: #ffffff; /* White text on hover */
+}
+
+/* Show Dropdown on Hover */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block !important; /* Force the display on hover */
+}
+
+
+.nav-link {
+    color: #333; /* Dark Gray */
+    font-size: 22px; /* Increased font size */
+    font-weight: 500; /* Slightly bold for emphasis */
+    text-decoration: none;
+    font-family: 'Roboto', Arial, sans-serif; /* Nice font */
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #D32F2F; /* Highlight color for hover */
+}
+
+/* Call-to-Action and WhatsApp */
+.cta-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.whatsapp {
+    color: #25d366;
+    font-size: 48px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp:hover {
+    transform: scale(1.1);
+}
+
+.btn {
+    color: #ffffff;
+    background-color: #D32F2F;
+    padding: 10px 20px;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-right: 25px;
+    animation: glow-pulse 1.5s infinite; /* Add continuous animation */
+}
+
+.btn:hover {
+    background-color: #800d0d;
+}
+
+@keyframes glow-pulse {
+    0% {
+        box-shadow: 0 0 7px #D32F2F;
+    }
+    50% {
+        box-shadow: 0 0 18px #D32F2F;
+    }
+    100% {
+        box-shadow: 0 0 7px #D32F2F;
+    }
+}
+
+
+/* Section Title */
+.collection-tab-list{
+    margin-top: 20px;
+}
+
+.collection-tab-list a{
+    text-decoration: none;
+    padding: 0px 12px;
+    color: #D32F2F;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.collection-tab-list a:hover{
+    color: rgb(150, 0, 0);
+}
+
+#modular-kitchen-design{
+    margin-bottom: 200px;
+}
+.collection-top-title h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Modular Kitchen Designs Section */
+.collection-slider-title h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 80px;
+    color: #333;
+}
+
+/* Carousel Container */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Carousel Item Styling */
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Even spacing for content */
+    align-items: center;
+    height: 350px; /* Set a fixed height for the entire item */
+    width: 320px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 0 15px;
+    padding: 10px;
+}
+
+
+
+/* Set a fixed height and width for all images */
+.item img {
+    width: 100%; /* Fill the width of the container */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image is cropped proportionally */
+    border-radius: 8px;
+}
+
+
+.get-qte-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #D32F2F;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: auto; /* Push button to the bottom */
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+
+.get-qte-btn:hover {
+    background-color: #a50606;
+}
+
+/* Navigation Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+/* View More Button */
+.view-all-collection-button-new {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.view-all-collection-button-new a {
+    font-size: 19px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    background-color: #D32F2F;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.view-all-collection-button-new a:hover {
+    background-color: #b80e0e;
+}
+
+/* Footer Styles */
+.footer {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #fff;
+    background-color: #333;
+    padding: 20px 10px;
+}
+
+/* Footer Top Section */
+.footer-top {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 35px;
+}
+
+.footer-title {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.footer-btn {
+    background-color: #D32F2F;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.footer-btn:hover {
+    background-color: #B71C1C;
+}
+
+/* Footer Links Section (Row Layout) */
+
+.footer-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    /* display: flex; */
+     /* Align items in a row */
+    justify-content: center;
+    margin: 20px 0;
+    flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+.footer-links ul li {
+    margin: 0 15px;
+    padding: 8px 0px;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.footer-links ul li a:hover {
+    color: #D32F2F;
+}
+
+/* Footer Locations Section (Horizontal Layout) */
+.footer-locations {
+    padding: 20px;
+    text-align: center;
+    background-color: #333; /* Optional background for contrast */
+}
+
+.footer-locations h3 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #fff;
+    font-family: 'Roboto', Arial, sans-serif; /* Ensures consistent typography */
+}
+
+.footer-locations ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    gap: 20px; /* Adds space between items */
+    justify-content: center; /* Centers the items */
+    align-items: center; /* Vertically centers the items */
+}
+
+.footer-locations li {
+    font-size: 18px;
+    color: #ccc;
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0 10px; /* Adds horizontal spacing */
+    text-align: left;
+}
+
+.footer-locations strong {
+    color: #D32F2F;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.footer-locations li:hover strong {
+    color: #fff; /* Optional hover effect for city names */
+    text-decoration: underline; /* Highlights on hover */
+}
+
+.footer-locations li:hover {
+    color: #eee; /* Optional hover effect for text */
+}
+
+
+
+/* Footer Bottom Section */
+.footer-bottom {
+    display: flex; /* Align items in a row */
+    justify-content: space-between; /* Spread content across the row */
+    align-items: center;
+    padding: 15px;
+    font-size: 14px;
+    background-color: #222;
+    flex-wrap: wrap; /* Make responsive */
+    text-align: center; /* Default for smaller screens */
+}
+
+.footer-bottom a {
+    color: #D32F2F;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Social Icons (Horizontal Layout) */
+/* Footer Social Icons Section */
+.footer-social {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 24px; /* Icon size */
+    margin: 0 15px;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.footer-social a:hover {
+    color: #D32F2F;
+    transform: scale(1.2);
+}
+
+.footer-links-mobile{
+    display: none;
+}
+.burger-menu{
+    display: none;
+}
+.menu-toggle{
+    display: none;
+}
+.toggle-submenu{
+    display: none;
+}
+
+
+/* Responsive  */
+
+@media(max-width:1150px){
+    .navbar-brand img {
+        max-height: 60px;
+        width: 205px;
+    }
+    .nav-link {
+        color: #333; /* Dark Gray */
+        font-size: 18px; /* Increased font size */
+        font-weight: 500; /* Slightly bold for emphasis */
+        text-decoration: none;
+        font-family: 'Roboto', Arial, sans-serif; /* Nice font */
+        transition: color 0.3s ease;
+    }
+    .whatsapp {
+        color: #25d366;
+        font-size: 40px;
+        text-decoration: none;
+        transition: transform 0.3s ease;
+    }
+    
+    .whatsapp:hover {
+        transform: scale(1.1);
+    }
+    
+    .btn {
+        color: #ffffff;
+        background-color: #D32F2F;
+        padding: 10px 20px;
+        font-size: 18px;
+        font-weight: 500;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        margin-right: 25px;
+        animation: glow-pulse 1.5s infinite; /* Add continuous animation */
+    }
+    
+    .btn:hover {
+        background-color: #800d0d;
+    }
+    .alert {
+        background-color: #D32F2F;
+        color: #ffffff;
+        padding: 10px 20px;
+        width: 100%;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+        position: relative;
+        box-sizing: border-box;
+    }
+    
+    .notify-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: #ffffff;
+        font-size: 15px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+/* footer links */
+
+.footer-links {
+    justify-content: space-between; /* Spread out sections on medium screens */
+    gap: 10px; /* Reduce gap for smaller screens */
+}
+
+.footer-links ul {
+    justify-content: space-around; /* Evenly distribute links within each section */
+}
+
+.footer-links ul li a {
+    font-size: 18px; /* Slightly smaller font size for better fit */
+}
+
+
+}
+
+
+@media(max-width:960px){
+    .navbar-brand img {
+        max-height: 50px;
+        width: 180px;
+    }
+    .nav-link {
+        color: #333; /* Dark Gray */
+        font-size: 16px; /* Increased font size */
+        font-weight: 500; /* Slightly bold for emphasis */
+    }
+    .whatsapp {
+        font-size: 30px;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 15px;
+        font-weight: 500;
+        margin-right: 25px;
+
+    }
+    .alert {
+        padding: 10px 20px;
+        width: 100%;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        position: relative;
+        box-sizing: border-box;
+    }
+    
+    .notify-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 12px;
+        border: none;
+        cursor: pointer;
+    }
+    
+}
+
+
+@media (max-width: 870px) {
+    /* Navbar container */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        padding: 5px 20px;
+        position: relative;
+        border-bottom: 1px solid #ddd;
+      }
+      
+      /* Hamburger menu button */
+      .menu-toggle {
+        display: flex;
+        font-size: 30px;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+      
+      /* Navbar brand (logo) */
+      .navbar-brand img {
+        max-height: 60px;
+      }
+      
+      /* Navbar links (hidden by default) */
+      .navbar-nav {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+      }
+      
+      /* Navbar active */
+      .navbar-nav.active {
+        display: flex;
+      }
+      
+      /* Dropdown menu */
+      .nav-item {
+        position: relative;
+        padding: 20px 20px;
+        border-bottom: 1px solid #ddd;
+      }
+      
+      .nav-link {
+        display: inline-block;
+        font-size: 24px;
+      }
+      
+      .dropdown-menu {
+        display: none;
+        padding-left: 20px;
+        margin-top: 10px;
+      }
+      
+      .dropdown-menu.active {
+        display: block;
+      }
+      .dropdown-item{
+        font-size: 25px;
+        font-weight: 500;
+      }
+      .nav-item.dropdown{
+        display: flex;
+        justify-content: center;
+      }
+      /* Toggle submenu button */
+      .toggle-submenu {
+        display: flex;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 26px;
+        font-weight: 700;
+        margin-left: auto;
+      }
+      
+      /* Call-to-action buttons */
+      .cta-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      
+      .cta-container .whatsapp {
+        color: #25d366;
+        font-size: 45px;
+      }
+      
+      .cta-container .btn {
+        background-color: #007bff;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        display: none;
+      }
+      
+      .cta-container .btn:hover {
+        background-color: #0056b3;
+      }
+
+      /* links */
+
+      .collection-tab-list {
+        display: flex;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Prevent wrapping of items */
+        padding: 10px;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .collection-tab-list a {
+        flex: 0 0 auto; /* Prevent shrinking of links */
+        font-size: 14px; /* Smaller font size for smaller screens */
+        padding: 5px 10px;
+        color: #D32F2F;
+        text-decoration: none;
+    }
+
+    .collection-tab-list a:hover {
+        color: rgb(150, 0, 0);
+    }
+
+    /* Hide scrollbar on WebKit browsers */
+    .collection-tab-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Fallback for other browsers */
+    .collection-tab-list {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+      /* corousel */
+
+      .collection-slider-title h2 {
+        font-size: 1.8rem;
+        margin-bottom: 50px;
+    }
+
+    .collection-top-title h1 {
+        font-size: 2.5rem;
+    }
+
+    .item {
+        width: 250px;
+        height: 300px;
+    }
+    #modular-kitchen-design{
+        margin-bottom: 100px;
+    }
+
+    
+
+.view-all-collection-button-new a {
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 16px;
+}
+
+        /* Footer */
+        .footer-top {
+            padding: 15px; /* Reduce padding for smaller screens */
+        }
+    
+        .footer-title {
+            font-size: 28px; /* Reduce title size */
+        }
+    
+        .footer-btn {
+            font-size: 18px; /* Adjust button font size */
+            padding: 8px 16px; /* Adjust button padding */
+        }
+        /* footer links */
+    
+         .footer-links{
+            display: none;
+         }
+         
+    .footer-links-mobile{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .footer-links-mobile ul {
+        list-style: none;
+        padding: 0;
+        /* display: flex; */
+         /* Align items in a row */
+        justify-content: center;
+        margin: 20px 0;
+        flex-wrap: wrap; /* Ensure responsiveness */
+    }
+    
+    .footer-links-mobile ul li {
+        margin: 0 15px;
+        padding: 8px 0px;
+    }
+    
+    .footer-links-mobile ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    
+    .footer-links-mobile ul li a:hover {
+        color: #D32F2F;
+    }
+        .footer-links-mobile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* display: inline; */
+            font-size: 14px; /* Reduce font size for smaller screens */
+        }
+    
+        /* footer locations */
+    
+        .footer-locations h3 {
+            font-size: 20px; /* Reduce title font size */
+            text-align: center; /* Center align the title */
+        }
+    
+        .footer-locations ul {
+            gap: 0px; /* Reduce spacing between list items */
+            justify-content: center; /* Align items to the center */
+            padding: 0;
+        }
+    
+        .footer-locations li {
+            font-size: 16px; /* Font size for smaller screens */
+            display: flex; /* Use flexbox for inline display of city and address */
+            align-items: center; /* Vertically align city names and addresses */
+            width: 100%; /* Ensure it spans the full container width */
+            max-width: 400px; /* Optional: Limit the maximum width */
+            margin: 0 auto 5px auto; /* Center-align each item and add spacing below */
+            padding: 8px 15px; /* Add padding for better readability */
+        }
+    
+        .footer-locations strong {
+            font-size: 18px; /* Emphasize city names */
+            color: #D32F2F; /* Highlight the city name */
+            margin-right: 10px; /* Add spacing between the city name and address */
+            flex-shrink: 0; /* Ensure the city name doesn’t shrink */
+        }
+    
+        .footer-locations span {
+            font-size: 16px; /* Font size for the address */
+            color: #ccc; /* Address text color */
+            text-align: left; /* Align address text to the left */
+            flex-grow: 1; /* Allow the address to take up remaining space */
+            overflow: hidden; /* Hide overflow text if needed */
+            text-overflow: ellipsis; /* Add ellipsis for long addresses */
+            white-space: nowrap; /* Prevent address from wrapping to a new line */
+        }
+        /* footer location */
+        
+    .footer-social {
+        text-align: center;
+        padding: 20px 5px;
+        background-color: #333;
+    }
+    
+    .footer-social a {
+        text-decoration: none;
+        color: #ccc;
+        font-size: 20px; /* Icon size */
+        margin: 0 8px;
+        transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+    }
+
+
+
+
+
