@@ -274,7 +274,53 @@
 
         /* Details Section */
         .details-section {
-            display: none; /* Initially hidden */
+            width: 75%;
+            padding: 5px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;  
+            border-left: 5px solid #D32F2F;
+            border-right: 5px solid #D32F2F;
+            transition: all 0.3s ease-in-out;
+            display: block; 
+            text-align: center;
+        }
+        .details-section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .details-section h3{
+            color: #2c3e50;
+            font-size: 28px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        p {
+            color: #555;
+            font-size: 22px;
+            text-align: center;
+        }
+        ul {
+            line-height: 1.8;
+            color: #333;
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 25px;
+            text-align: left;
+        }
+        ul li::before {
+            position: absolute;
+            left: 0;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        /*.details-section {
+            display: none; 
             margin-top: 20px;
             padding: 20px;
             border: 1px solid #ddd;
@@ -282,12 +328,12 @@
             background: #f9f9f9;
             max-width: 800px;
             margin: 20px auto;
-            text-align: center; /* Center-align text */
+            text-align: center; 
         }
 
         .details-section h3 {
             margin-top: 0;
-        }
+        } 
 
 /* Footer Styles */
 .footer {
